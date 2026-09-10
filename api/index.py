@@ -9,12 +9,7 @@ app = Flask(__name__)
 # Enable CORS for frontend integration
 CORS(app)
 
-# ==========================================
-# FIREBASE INITIALIZATION
-# ==========================================
-# Credentials are loaded from an environment variable, never hardcoded.
-# Set FIREBASE_CREDENTIALS_JSON in your Vercel project settings to the
-# full contents of your service account JSON file (as a single-line string).
+
 
 if not firebase_admin._apps:
     firebase_creds_raw = os.environ.get("FIREBASE_CREDENTIALS_JSON")
